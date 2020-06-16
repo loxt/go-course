@@ -11,5 +11,5 @@ const (
 
 func main() {
 
-	fmt.Println(a, b, c, d, e)
+	fmt.Println(a, b, c, d)
 }
