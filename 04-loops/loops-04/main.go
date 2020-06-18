@@ -1,10 +1,23 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	// for init; condition; post {}
-	for i := 0; i <= 5; i++ {
-		fmt.Println("Hello, world")
+	i := 1
+	for {
+		i++
+		if i > 100 {
+			break
+		}
+
+		if i%2 != 0 {
+			continue
+
+		}
+
+		fmt.Println(i)
 	}
+	fmt.Println("Done.")
 }
