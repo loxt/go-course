@@ -3,8 +3,18 @@ package main
 import "fmt"
 
 func main() {
-	// for init; condition; post {}
-	for i := 0; i <= 5; i++ {
-		fmt.Println("Hello, world")
+	i := 1
+	//for i < 2 {
+	//	i++
+	//	fmt.Println("Hello world!")
+	//}
+
+	for {
+		if i > 10 {
+			break
+		}
+		fmt.Println(i)
+		i++
 	}
+	fmt.Println("Done.")
 }
