@@ -3,6 +3,7 @@ package main
 import (
 	"encoding/json"
 	"fmt"
+	"os"
 )
 
 type user struct {
@@ -18,9 +19,10 @@ func main() {
 	err := json.Unmarshal([]byte(json2), &users)
 
 	if err != nil {
-		fmt.Println(err)
+		fmt.Println("first err", err)
 	}
-	for i, v := range users {
-		fmt.Print("User number #", i, " have the current name: ", v.First+"\n")
+	err = json.NewEncoder(os.Stdout).Encode(users)
+	if err != nil {
+		fmt.Println("we did something wrong", err)
 	}
 }
